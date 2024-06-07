@@ -11,4 +11,5 @@ module com.demo.javafxexample {
     opens com.demo.javafxexample to javafx.fxml;
     exports com.demo.javafxexample;
     exports com.demo.javafxexample.treeview;
+    exports com.demo.javafxexample.tableview;
 }
