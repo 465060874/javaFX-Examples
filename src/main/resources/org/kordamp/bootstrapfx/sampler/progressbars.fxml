@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="progress-bar-primary"/>
+    <ProgressBar GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"
+                 styleClass="progress-bar-primary"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="progress-bar-success"/>
+    <ProgressBar GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS"
+                 styleClass="progress-bar-success"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="progress-bar-info"/>
+    <ProgressBar GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.hgrow="ALWAYS"
+                 styleClass="progress-bar-info"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="progress-bar-warning"/>
+    <ProgressBar GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.hgrow="ALWAYS"
+                 styleClass="progress-bar-warning"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="progress-bar-danger"/>
+    <ProgressBar GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.hgrow="ALWAYS"
+                 styleClass="progress-bar-danger"/>
+</GridPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane hgap="10" vgap="10" styleClass="page">
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+
+    <SplitMenuButton GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="split-menu-btn, split-menu-btn-lg, split-menu-btn-default" text="Default"/>
+    <SplitMenuButton GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="split-menu-btn, split-menu-btn-lg, split-menu-btn-primary" text="Primary"/>
+    <SplitMenuButton GridPane.columnIndex="2" GridPane.rowIndex="0" styleClass="split-menu-btn, split-menu-btn-lg, split-menu-btn-success" text="Success"/>
+    <SplitMenuButton GridPane.columnIndex="3" GridPane.rowIndex="0" styleClass="split-menu-btn, split-menu-btn-lg, split-menu-btn-info" text="Info"/>
+    <SplitMenuButton GridPane.columnIndex="4" GridPane.rowIndex="0" styleClass="split-menu-btn, split-menu-btn-lg, split-menu-btn-warning" text="Warning"/>
+    <SplitMenuButton GridPane.columnIndex="5" GridPane.rowIndex="0" styleClass="split-menu-btn, split-menu-btn-lg, split-menu-btn-danger" text="Danger"/>
+
+    <SplitMenuButton GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="split-menu-btn, split-menu-btn-default" text="Default"/>
+    <SplitMenuButton GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="split-menu-btn, split-menu-btn-primary" text="Primary"/>
+    <SplitMenuButton GridPane.columnIndex="2" GridPane.rowIndex="1" styleClass="split-menu-btn, split-menu-btn-success" text="Success"/>
+    <SplitMenuButton GridPane.columnIndex="3" GridPane.rowIndex="1" styleClass="split-menu-btn, split-menu-btn-info" text="Info"/>
+    <SplitMenuButton GridPane.columnIndex="4" GridPane.rowIndex="1" styleClass="split-menu-btn, split-menu-btn-warning" text="Warning"/>
+    <SplitMenuButton GridPane.columnIndex="5" GridPane.rowIndex="1" styleClass="split-menu-btn, split-menu-btn-danger" text="Danger"/>
+
+    <SplitMenuButton GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="split-menu-btn, split-menu-btn-sm, split-menu-btn-default" text="Default"/>
+    <SplitMenuButton GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="split-menu-btn, split-menu-btn-sm, split-menu-btn-primary" text="Primary"/>
+    <SplitMenuButton GridPane.columnIndex="2" GridPane.rowIndex="2" styleClass="split-menu-btn, split-menu-btn-sm, split-menu-btn-success" text="Success"/>
+    <SplitMenuButton GridPane.columnIndex="3" GridPane.rowIndex="2" styleClass="split-menu-btn, split-menu-btn-sm, split-menu-btn-info" text="Info"/>
+    <SplitMenuButton GridPane.columnIndex="4" GridPane.rowIndex="2" styleClass="split-menu-btn, split-menu-btn-sm, split-menu-btn-warning" text="Warning"/>
+    <SplitMenuButton GridPane.columnIndex="5" GridPane.rowIndex="2" styleClass="split-menu-btn, split-menu-btn-sm, split-menu-btn-danger" text="Danger"/>
+
+    <SplitMenuButton GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="split-menu-btn, split-menu-btn-xs, split-menu-btn-default" text="Default"/>
+    <SplitMenuButton GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="split-menu-btn, split-menu-btn-xs, split-menu-btn-primary" text="Primary"/>
+    <SplitMenuButton GridPane.columnIndex="2" GridPane.rowIndex="3" styleClass="split-menu-btn, split-menu-btn-xs, split-menu-btn-success" text="Success"/>
+    <SplitMenuButton GridPane.columnIndex="3" GridPane.rowIndex="3" styleClass="split-menu-btn, split-menu-btn-xs, split-menu-btn-info" text="Info"/>
+    <SplitMenuButton GridPane.columnIndex="4" GridPane.rowIndex="3" styleClass="split-menu-btn, split-menu-btn-xs, split-menu-btn-warning" text="Warning"/>
+    <SplitMenuButton GridPane.columnIndex="5" GridPane.rowIndex="3" styleClass="split-menu-btn, split-menu-btn-xs, split-menu-btn-danger" text="Danger"/>
+</GridPane>
