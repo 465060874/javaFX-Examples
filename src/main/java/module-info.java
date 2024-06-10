@@ -40,4 +40,5 @@ module com.demo.javafxexample {
     exports org.kordamp.bootstrapfx.sampler;
     exports com.demo.javafxexample.text;
     exports com.demo.javafxexample.apps.richeditor;
+    exports com.demo.javafxexample.webview;
 }

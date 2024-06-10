@@ -159,6 +159,10 @@ public class AppUI extends Application {
         primaryStage.show();
 
         menuTreeView.requestFocus();
+
+        primaryStage.setOnCloseRequest((event) -> {
+            System.out.println("Closing Stage");
+        });
     }
 
     private void addCatetory() {
@@ -221,7 +225,8 @@ public class AppUI extends Application {
 
         Scene dialogScene = new Scene(dialogVBox);
         dialogStage.setScene(dialogScene);
-        dialogStage.show();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.showAndWait();
     }
 
 
@@ -323,6 +328,8 @@ public class AppUI extends Application {
         Styles.toggleStyleClass(knowledgeEntryTableView, Styles.STRIPED);
         StackPane root = new StackPane(knowledgeEntryTableView);
         tabPane.getTabs().get(0).setContent(root);
+        tabPane.getSelectionModel().select(tabPane.getTabs().get(0));
+
 
 
     }

@@ -127,7 +127,8 @@ public class KnowledgeEntryTableView {
 
         Scene dialogScene = new Scene(dialogVBox);
         dialogStage.setScene(dialogScene);
-        dialogStage.show();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.showAndWait();
     }
 
     private class CopyableTableCell extends TableCell<KnowledgeEntryDTO, String> {

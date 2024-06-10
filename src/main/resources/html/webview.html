@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaFX and JavaScript Integration</title>
+    <script>
+        function myJavaScriptFunction(){
+            return "result from myJavaScriptFunction";
+        }
+
+        function jsFunctionGreeting(message){
+            alert("JavaScript says: " + message);
+        }
+
+        function callJavaMethod() {
+            window.javaConnector.showMessage("Hello from JavaScript!");
+        }
+
+        function callJavaAlert() {
+            window.javaConnector.showAlert("This is an alert from JavaScript!");
+        }
+    </script>
+</head>
+<body>
+<h1>JavaFX and JavaScript Integration</h1>
+<button onclick="callJavaMethod()">Call Java Method</button>
+<button onclick="callJavaAlert()">Show Java Alert</button>
+</body>
+</html>

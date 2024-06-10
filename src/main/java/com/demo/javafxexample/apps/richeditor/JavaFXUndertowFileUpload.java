@@ -42,6 +42,10 @@ public class JavaFXUndertowFileUpload extends Application {
         Scene scene = new Scene(webView, 800, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setOnCloseRequest((event) -> {
+            System.out.println("Closing Stage");
+            server.stop();
+        });
     }
 
     public static void main(String[] args) {
