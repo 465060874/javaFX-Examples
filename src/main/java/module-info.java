@@ -29,6 +29,10 @@ module com.demo.javafxexample {
     exports com.demo.javafxexample.tableview;
     exports com.demo.javafxexample.apps.studentinfo1;
     exports com.demo.javafxexample.apps.studentinfo2;
+    exports com.demo.javafxexample.apps.bkcourse.mvvmapp;
+    exports com.demo.javafxexample.apps.bkcourse.modelchangeapp;
+    exports com.demo.javafxexample.apps.bkcourse.bindingsapp;
+    exports com.demo.javafxexample.apps.bkcourse.dialogapp;
     exports com.demo.javafxexample.htmleditor;
     exports com.demo.javafxexample.layout;
     exports com.demo.javafxexample.database;

@@ -57,6 +57,10 @@ public class Category {
         AtlantaFX.setParent(new CodeNamePair("AtlantaFX", "AtlantaFX"));
         categories.add(AtlantaFX);
 
+        Category CSPROD = new Category();
+        CSPROD.setParent(new CodeNamePair("CSPROD", "CargoSmart PROD IS"));
+        categories.add(CSPROD);
+
         return categories;
     }
 }

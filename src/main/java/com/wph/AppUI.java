@@ -252,6 +252,7 @@ public class AppUI extends Application {
         LINK_MAPS.put("FormsFX", "https://github.com/dlsc-software-consulting-gmbh/FormsFX");
         LINK_MAPS.put("bootstrapfx", "https://github.com/kordamp/bootstrapfx");
         LINK_MAPS.put("AtlantaFX", "https://github.com/mkpaz/atlantafx");
+        LINK_MAPS.put("CSPROD", "https://www.cargosmart.com/admin/internalsupport/is_sign_in.jsf");
 
     }
 
