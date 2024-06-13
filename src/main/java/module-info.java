@@ -2,6 +2,7 @@ module com.demo.javafxexample {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires javafx.media;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
@@ -23,7 +24,7 @@ module com.demo.javafxexample {
 //    requires jakarta.servlet;
 //    requires org.eclipse.jetty.servlet;
 
-    opens com.demo.javafxexample to javafx.fxml;
+    opens com.demo.javafxexample to javafx.controls, javafx.fxml, javafx.base,javafx.media;
     exports com.demo.javafxexample;
     exports com.demo.javafxexample.treeview;
     exports com.demo.javafxexample.tableview;
@@ -40,9 +41,13 @@ module com.demo.javafxexample {
     exports com.wph;
     exports com.wph.domain;
     exports com.wph.view;
+    exports com.wph.business;
     opens com.wph.dto to javafx.controls, javafx.fxml, javafx.base;
     exports org.kordamp.bootstrapfx.sampler;
     exports com.demo.javafxexample.text;
     exports com.demo.javafxexample.apps.richeditor;
     exports com.demo.javafxexample.webview;
+    exports com.demo.javafxexample.apps.bkcourse.tvlistapp.s1.finish;
+    exports com.demo.javafxexample.apps.bkcourse.visualcueapp;
+    opens com.demo.javafxexample.apps.bkcourse.tvlistapp.s1.finish to javafx.controls, javafx.fxml, javafx.base;
 }

@@ -9,9 +9,12 @@ import com.dlsc.formsfx.model.structure.Field;
 import com.dlsc.formsfx.model.structure.Form;
 import com.dlsc.formsfx.model.structure.Group;
 import com.dlsc.formsfx.view.renderer.FormRenderer;
+import com.wph.business.BusinessKnowledgeView;
 import com.wph.domain.Category;
 import com.wph.dto.KnowledgeEntryDTO;
+import com.wph.dto.MessageEntryDTO;
 import com.wph.view.KnowledgeEntryTableView;
+import com.wph.view.MessageEntryTableView;
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -51,7 +54,7 @@ public class AppUI extends Application {
     private TabPane tabPane;
     private Tab welcomeTab;
     private FormRenderer displayForm;
-    private TableView<KnowledgeEntryDTO> knowledgeEntryTableView;
+    //private TableView<KnowledgeEntryDTO> knowledgeEntryTableView;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -282,52 +285,62 @@ public class AppUI extends Application {
             }
             return;
         }
-
-        VBox vBox = new VBox();
-        VBox topBox = new VBox();
-        topBox.setBorder(new Border(new BorderStroke(Color.RED, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
-        topBox.setPadding(new Insets(10, 10, 10, 10));
-        VBox bottomBox = new VBox();
-        Pane pane = new Pane();
-        topBox.prefWidthProperty().bind(pane.widthProperty());
-        pane.setPadding(new Insets(10, 10, 10, 10));
 //
-//        pane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, new Insets(10, 10, 10, 10))));
-        pane.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
-        topBox.setSpacing(20);     // 设置子节点间的间距
-        Label label = new Label(menuItem.getName());
-        label.setOnMouseClicked(event -> {
-            if (event.getClickCount() == 2) {
-                String selectedText = label.getText();
-                ClipboardContent content = new ClipboardContent();
-                content.putString(selectedText);
-                Clipboard.getSystemClipboard().setContent(content);
-            }
-        });
-
-        HBox box = new HBox();
-//        box.setSpacing(20);
-        box.setPadding(new Insets(10));
-        Button button = new Button("复制");
-        button.getStyleClass().setAll("btn","btn-danger");
-        button.setOnAction(event -> {
-            showEditForm(menuItem);
-            bottomBox.getChildren().clear();
-            bottomBox.getChildren().add(displayForm);
-        });
-        box.getChildren().addAll(label, button);
-
-//        topBox.setPadding(new Insets(20, 20, 10, 10));
-        topBox.getChildren().addAll(box);
-
-        vBox.getChildren().addAll(topBox, bottomBox);
+//        VBox vBox = new VBox();
+//        VBox topBox = new VBox();
+//        topBox.setBorder(new Border(new BorderStroke(Color.RED, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
+//        topBox.setPadding(new Insets(10, 10, 10, 10));
+//        VBox bottomBox = new VBox();
+//        Pane pane = new Pane();
+//        topBox.prefWidthProperty().bind(pane.widthProperty());
+//        pane.setPadding(new Insets(10, 10, 10, 10));
+////
+////        pane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, new Insets(10, 10, 10, 10))));
+//        pane.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
+//        topBox.setSpacing(20);     // 设置子节点间的间距
+//        Label label = new Label(menuItem.getName());
+//        label.setOnMouseClicked(event -> {
+//            if (event.getClickCount() == 2) {
+//                String selectedText = label.getText();
+//                ClipboardContent content = new ClipboardContent();
+//                content.putString(selectedText);
+//                Clipboard.getSystemClipboard().setContent(content);
+//            }
+//        });
+//
+//        HBox box = new HBox();
+////        box.setSpacing(20);
+//        box.setPadding(new Insets(10));
+//        Button button = new Button("复制");
+//        button.getStyleClass().setAll("btn","btn-danger");
+//        button.setOnAction(event -> {
+//            showEditForm(menuItem);
+//            bottomBox.getChildren().clear();
+//            bottomBox.getChildren().add(displayForm);
+//        });
+//        box.getChildren().addAll(label, button);
+//
+////        topBox.setPadding(new Insets(20, 20, 10, 10));
+//        topBox.getChildren().addAll(box);
+//
+//        vBox.getChildren().addAll(topBox, bottomBox);
         tabPane.getTabs().get(0).setText(menuItem.getName());
 
-        KnowledgeEntryTableView entryTableView = new KnowledgeEntryTableView();
-        knowledgeEntryTableView = entryTableView.getTableView();
-        Styles.toggleStyleClass(knowledgeEntryTableView, Styles.BORDERED);
-        Styles.toggleStyleClass(knowledgeEntryTableView, Styles.STRIPED);
-        StackPane root = new StackPane(knowledgeEntryTableView);
+        StackPane root = null;
+        if("br_message".equalsIgnoreCase(menuItem.getCode())){
+            root = new BusinessKnowledgeView();
+//            MessageEntryTableView entryTableView = new MessageEntryTableView();
+//            TableView<MessageEntryDTO> knowledgeEntryTableView = entryTableView.getTableView();
+//            Styles.toggleStyleClass(knowledgeEntryTableView, Styles.BORDERED);
+//            Styles.toggleStyleClass(knowledgeEntryTableView, Styles.STRIPED);
+//            root = new StackPane(knowledgeEntryTableView);
+        }else {
+            KnowledgeEntryTableView entryTableView = new KnowledgeEntryTableView();
+            TableView<KnowledgeEntryDTO> knowledgeEntryTableView = entryTableView.getTableView();
+            Styles.toggleStyleClass(knowledgeEntryTableView, Styles.BORDERED);
+            Styles.toggleStyleClass(knowledgeEntryTableView, Styles.STRIPED);
+            root = new StackPane(knowledgeEntryTableView);
+        }
         tabPane.getTabs().get(0).setContent(root);
         tabPane.getSelectionModel().select(tabPane.getTabs().get(0));
 

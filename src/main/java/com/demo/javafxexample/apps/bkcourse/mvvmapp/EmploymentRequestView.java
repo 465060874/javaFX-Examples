@@ -53,36 +53,39 @@ public class EmploymentRequestView extends VBox {
 
     private void createView() {
         VBox gpwrap = new VBox();
-        gpwrap.setAlignment( Pos.CENTER );
+        gpwrap.setAlignment(Pos.CENTER);
 
-        gp.setPadding( new Insets(40) );
-        gp.setVgap( 4 );
-        gp.add(new Label("Name"), 0, 0);                  gp.add(tfName, 1, 0);
-        gp.add(new Label("Desired Position"), 0, 1);      gp.add(tfPosition, 1, 1);
-        gp.add(new Label("Current Annual Salary"), 0, 2); gp.add(tfAnnualSalary, 1, 2);
+        gp.setPadding(new Insets(40));
+        gp.setVgap(4);
+        gp.add(new Label("Name"), 0, 0);
+        gp.add(tfName, 1, 0);
+        gp.add(new Label("Desired Position"), 0, 1);
+        gp.add(tfPosition, 1, 1);
+        gp.add(new Label("Current Annual Salary"), 0, 2);
+        gp.add(tfAnnualSalary, 1, 2);
 
         final ColumnConstraints col = new ColumnConstraints();
-        col.setPercentWidth( 50 );
+        col.setPercentWidth(50);
 
-        gp.getColumnConstraints().addAll( col, col );
+        gp.getColumnConstraints().addAll(col, col);
 
-        gpwrap.getChildren().add( gp );
+        gpwrap.getChildren().add(gp);
 
-        VBox.setVgrow( gpwrap, Priority.ALWAYS );
+        VBox.setVgrow(gpwrap, Priority.ALWAYS);
 
-        btnSave.setOnAction( this::save );
-        btnCancel.setOnAction( this::cancel );
-        btnReset.setOnAction( this::reset );
+        btnSave.setOnAction(this::save);
+        btnCancel.setOnAction(this::cancel);
+        btnReset.setOnAction(this::reset);
 
         btnSave.setDefaultButton(true);
 
         ButtonBar buttonBar = new ButtonBar();
-        buttonBar.setPadding( new Insets(20.0d) );
+        buttonBar.setPadding(new Insets(20.0d));
         ButtonBar.setButtonData(btnSave, ButtonBar.ButtonData.OK_DONE);
         ButtonBar.setButtonData(btnCancel, ButtonBar.ButtonData.CANCEL_CLOSE);
         ButtonBar.setButtonData(btnReset, ButtonBar.ButtonData.APPLY);
 
-        buttonBar.getButtons().addAll( btnSave, btnCancel, btnReset );
+        buttonBar.getButtons().addAll(btnSave, btnCancel, btnReset);
 
         this.getChildren().addAll(
                 gpwrap,
@@ -103,11 +106,15 @@ public class EmploymentRequestView extends VBox {
         );
     }
 
-    private void save(ActionEvent evt) { viewModel.save(); }
+    private void save(ActionEvent evt) {
+        viewModel.save();
+    }
 
     private void cancel(ActionEvent evt) {
         Platform.exit();
     }
 
-    private void reset(ActionEvent evt) { viewModel.reset(); }
+    private void reset(ActionEvent evt) {
+        viewModel.reset();
+    }
 }

@@ -1,0 +1,38 @@
+.tvlist {
+    -fx-opacity: 0.7;
+    -fx-padding: 0;
+}
+
+.tvlist-container {
+    -fx-background-image: url("../../images/pa_lake_beach.jpg");
+    -fx-background-position: center;
+}
+
+.tvlist-cell-container {
+}
+
+.tvlist-program-name, .tvlist-last-recording, .tvlist-status {
+    -fx-text-fill: white;
+    -fx-font-family: Arial;
+}
+
+.tvlist-program-name {
+}
+
+.tvlist-last-recording {
+}
+
+.tvlist-status {
+    -fx-font-size: 18px;
+    -fx-padding: 10px 2px 10px 2px;
+}
+
+.tvlist-list-cell-empty {
+}
+
+.tvlist-list-cell{
+}
+
+.tvlist-list-cell:focused:selected {
+}
+
