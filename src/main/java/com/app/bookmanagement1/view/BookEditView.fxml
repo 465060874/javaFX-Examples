@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.app.bookmanagement1.view.BookEditController"
+      prefHeight="200.0" prefWidth="400.0" spacing="10">
+    <TextField fx:id="nameTextField" promptText="Book Name"/>
+    <TextField fx:id="authorTextField" promptText="Author"/>
+    <TextField fx:id="priceTextField" promptText="Price"/>
+    <Button text="Save" onAction="#saveBook"/>
+</VBox>

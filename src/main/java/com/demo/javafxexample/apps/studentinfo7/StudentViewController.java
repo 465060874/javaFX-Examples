@@ -66,8 +66,6 @@ public class StudentViewController {
 
     private void showEditDialog(Student student) {
         try {
-
-
             URL location = getClass().getResource("/studentinfo7/student_edit_dialog.fxml");
             FXMLLoader loader = new FXMLLoader(location);
             loader.setLocation(location);

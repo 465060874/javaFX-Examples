@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.util.Callback?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.app.bookmanagement1.view.BookListController"
+      prefHeight="400.0" prefWidth="600.0">
+    <TableView fx:id="bookTableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Book Name" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Author" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="author"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Price" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Action" prefWidth="100">
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>

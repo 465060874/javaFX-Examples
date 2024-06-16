@@ -20,6 +20,7 @@ module com.demo.javafxexample {
     requires org.kordamp.ikonli.fontawesome5;
     requires jdk.jsobject;
     requires undertow.core;
+    requires de.saxsys.mvvmfx;
 //    requires org.eclipse.jetty.server;
 //    requires jakarta.servlet;
 //    requires org.eclipse.jetty.servlet;
@@ -36,6 +37,11 @@ module com.demo.javafxexample {
     exports com.demo.javafxexample.apps.studentinfo6;
     exports com.demo.javafxexample.apps.studentinfo7;
     opens com.demo.javafxexample.apps.studentinfo7 to javafx.controls, javafx.fxml, javafx.base;
+    exports com.demo.javafxexample.apps.studentinfo8;
+    opens com.demo.javafxexample.apps.studentinfo8 to javafx.controls, javafx.fxml, javafx.base;
+    exports com.demo.javafxexample.apps.studentinfo9;
+    opens com.demo.javafxexample.apps.studentinfo9 to javafx.controls, javafx.fxml, javafx.base;
+
     exports com.demo.javafxexample.apps.bkcourse.mvvmapp;
     exports com.demo.javafxexample.apps.bkcourse.modelchangeapp;
     exports com.demo.javafxexample.apps.bkcourse.bindingsapp;
@@ -49,11 +55,16 @@ module com.demo.javafxexample {
     exports com.wph.view;
     exports com.wph.business;
     opens com.wph.dto to javafx.controls, javafx.fxml, javafx.base;
-    exports org.kordamp.bootstrapfx.sampler;
     exports com.demo.javafxexample.text;
     exports com.demo.javafxexample.apps.richeditor;
     exports com.demo.javafxexample.webview;
     exports com.demo.javafxexample.apps.bkcourse.tvlistapp.s1.finish;
     exports com.demo.javafxexample.apps.bkcourse.visualcueapp;
     opens com.demo.javafxexample.apps.bkcourse.tvlistapp.s1.finish to javafx.controls, javafx.fxml, javafx.base;
+
+    exports com.app.bookmanagement1;
+    exports com.app.bookmanagement1.viewmodel;
+    exports com.app.bookmanagement1.model;
+    exports com.app.bookmanagement1.view;
+    opens com.app.bookmanagement1.view to javafx.controls, javafx.fxml, javafx.base;
 }

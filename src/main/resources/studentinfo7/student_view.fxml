@@ -26,9 +26,6 @@
                 </cellValueFactory>
             </TableColumn>
             <TableColumn text="Edit" fx:id="editColumn">
-                <cellValueFactory>
-                    <PropertyValueFactory property="edit"/>
-                </cellValueFactory>
             </TableColumn>
         </columns>
     </TableView>
